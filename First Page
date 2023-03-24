@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button Page</title>
+	<style>
+		/* Style for the info button's bubble */
+		.info-bubble {
+			position: absolute;
+			background-color: lightgray;
+			padding: 10px;
+			border-radius: 5px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<h1>Button Page</h1>
+	<!-- Info button -->
+	<button id="info-btn">Info</button>
+	<div class="info-bubble" id="info-bubble">None</div>
+
+	<!-- Comment box -->
+	<textarea rows="4" cols="50" placeholder="Type your comment here"></textarea>
+
+	<!-- Login/Signup button -->
+	<button id="login-signup-btn">Login/Signup</button>
+
+	<script>
+		// Script to show info bubble when info button is clicked
+		var infoBtn = document.getElementById("info-btn");
+		var infoBubble = document.getElementById("info-bubble");
+		infoBtn.addEventListener("click", function() {
+			infoBubble.style.display = "block";
+		});
+
+		// Script to redirect to login/signup page when login/signup button is clicked
+		var loginSignupBtn = document.getElementById("login-signup-btn");
+		loginSignupBtn.addEventListener("click", function() {
+			window.location.href = "http://example.com/login_signup_page";
+		});
+	</script>
+</body>
+</html>
